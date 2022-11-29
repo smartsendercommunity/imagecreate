@@ -44,4 +44,6 @@
 - `layers >  > color > alpha` - уровень прозрачности от 0 (непрозрачен) до 127 (полностью прозрачен)
 
 
-[^1]: Пример использования API для отправки пользователю изображения https://image.mufiksoft.com/chrome_mfSAN7FEJ2.jpg
+[^1]: Примеры использования API для отправки пользователю изображения
+https://image.mufiksoft.com/chrome_mfSAN7FEJ2.jpg
+https://image.mufiksoft.com/chrome_xfbizzt2a2.jpg

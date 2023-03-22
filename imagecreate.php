@@ -192,7 +192,7 @@ if ($result["state"] === false) {
         mkdir("images");
     }
     // Сохранение изображения
-    $imageSRC = imagejpeg($imageSRC, "images/".$imageName.".jpg", 100);
+    $resultImage = imagejpeg($imageSRC, "images/".$imageName.".jpg", 100);
     $imageSaveUrl = $url."/images/".$imageName.".jpg";
     if ($resultImage === false) {
         $result["state"] = false;

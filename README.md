@@ -11,15 +11,21 @@
 ```
 {
 "image":{
-"url":"img.png"
+  "url":"img.png"
 },
 "layers":[{
-"type":"text",
-"font":"/fonts/Montserrat-SemiBold.ttf",
-"text":"Текст наложения",
-"size":"50",
-"x":"center",
-"y":"700"
+  "type":"text",
+  "font":"/fonts/Montserrat-SemiBold.ttf",
+  "text":"Текст наложения",
+  "size":"50",
+  "color":{
+    "red":0,
+    "green":0,
+    "blue":255,
+    "alpha":0
+  }
+  "x":"center",
+  "y":"700"
 }]
 }
 ```

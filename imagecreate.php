@@ -202,6 +202,7 @@ if ($result["state"] === false) {
     } else {
         $result["state"] = true;
         $result["image"]["url"] = $imageSaveUrl;
+        $result["image"]["path"] = "images/".$imageName.".jpg";
         $result["image"]["width"] = getimagesize($imageSaveUrl)[0];
         $result["image"]["height"] = getimagesize($imageSaveUrl)[1];
     }

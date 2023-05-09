@@ -63,6 +63,7 @@ if ($input["image"] != NULL && is_array($input["image"])) {
         } else {
             $result["state"] = false;
             $result["error"]["message"][] = "failed load image";
+            $result["imageInfo"] = $imageFormat;
             echo json_encode($result);
             exit;
         }

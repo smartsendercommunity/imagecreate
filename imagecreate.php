@@ -60,6 +60,11 @@ if ($input["image"] != NULL && is_array($input["image"])) {
             $imageSRC = imagecreatefrompng($input["image"]["url"]);
         } else if ($imageFormat["mime"] == "image/jpeg") {
             $imageSRC = imagecreatefromjpeg($input["image"]["url"]);
+        } else {
+            $result["state"] = false;
+            $result["error"]["message"][] = "failed load image";
+            echo json_encode($result);
+            exit;
         }
         if ($imageSRC === false) {
             $result["state"] = false;

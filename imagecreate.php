@@ -152,12 +152,13 @@ if ($input["layers"] != NULL) {
                                     $layerX = $layerValue["x"] - ($diag2 / 2);
                                 }
                             }
-                        }
-                        $layerX = $layerValue["x"];
-                        settype($layerX, "int");
-                        if ($layerX != $layerValue["x"]) {
-                            $result["state"] = false;
-                            $result["error"]["message"][] = "'layers.".$layerKey.".x' must be in integer";
+                        } else {
+                            $layerX = $layerValue["x"];
+                            settype($layerX, "int");
+                            if ($layerX != $layerValue["x"]) {
+                                $result["state"] = false;
+                                $result["error"]["message"][] = "'layers.".$layerKey.".x' must be in integer";
+                            }
                         }
                     }
                     if ($layerValue["y"] == NULL) {

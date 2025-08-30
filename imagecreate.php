@@ -137,6 +137,22 @@ if ($input["layers"] != NULL) {
                             }
                         }
                     } else {
+                        if ($layerValue["align"] == "center") {
+                            $textBox = imageftbbox($layerValue["size"], $layerAngle, $layerValue["font"], $layerValue["text"]);
+                            if ($textBox === false) {
+                                $result["state"] = false;
+                                $result["error"]["message"][] = "'layers.".$layerKey."' failed add text";
+                                break;
+                            } else {
+                                $diag1 = abs($textBox[4] - $textBox[0]);
+                                $diag2 = abs($textBox[6] - $textBox[2]);
+                                if ($diag1 >= $diag2) {
+                                    $layerX = $layerValue["x"] - ($diag1 / 2);
+                                } else {
+                                    $layerX = $layerValue["x"] - ($diag2 / 2);
+                                }
+                            }
+                        }
                         $layerX = $layerValue["x"];
                         settype($layerX, "int");
                         if ($layerX != $layerValue["x"]) {
